@@ -13,12 +13,13 @@ import jakarta.persistence.ManyToOne;
 public class CicloMenstrual {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @ManyToOne
-    @JoinColumn(name = "usuarioId")
     public Integer codigo;
-    public Usuario usuario;
     public LocalDate dataInicio;
     public int duracaoCiclo;
     public int duracaoMenstruacao;
+
+    @ManyToOne
+    public Usuario usuario;
+
 
 }

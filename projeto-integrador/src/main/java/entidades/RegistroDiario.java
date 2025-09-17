@@ -13,14 +13,14 @@ import jakarta.persistence.ManyToOne;
 public class RegistroDiario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @ManyToOne
-    @JoinColumn(name = "usuarioId")
     public Integer codigo;
-    public Usuario usuario;
     public LocalDate data;
     public String humor;
     public String emocoes; 
     public String sintomas; 
     public String doencas;
+
+    @ManyToOne
+    public Usuario usuario;
 
 }

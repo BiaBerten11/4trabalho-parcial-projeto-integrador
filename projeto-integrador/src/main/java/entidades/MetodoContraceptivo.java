@@ -11,14 +11,13 @@ import jakarta.persistence.ManyToOne;
 public class MetodoContraceptivo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @ManyToOne
-    @JoinColumn(name = "usuarioId")
     public Integer codigo;
-    public Usuario usuario;
     public String nome;
     public String tipo;
     public Double eficacia;
     public String descricao;
 
+    @ManyToOne
+    public Usuario usuario;
 
 }

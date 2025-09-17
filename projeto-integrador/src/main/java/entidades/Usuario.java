@@ -17,6 +17,6 @@ public class Usuario {
     public String senha;
     public LocalDate dataNascimento;
     public String genero;
-    public boolean preferenciaNotificacao;
+    public Boolean preferenciaNotificacao;
 
 }
